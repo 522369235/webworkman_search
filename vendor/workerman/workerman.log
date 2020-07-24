@@ -1,0 +1,103 @@
+2020-07-24 02:37:08 pid:1 Error: Class 'mysqli_driver' not found in D:\www\demo\webworkman\vendor\xtgxiso\webworker\Libs\Mmysqli.php:4
+Stack trace:
+#0 D:\www\demo\webworkman\vendor\composer\ClassLoader.php(444): include()
+#1 D:\www\demo\webworkman\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('D:\\www\\demo\\web...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('WebWorker\\Libs\\...')
+#3 D:\www\demo\webworkman\vendor\xtgxiso\webworker\Libs\Mdb.php(17): spl_autoload_call('WebWorker\\Libs\\...')
+#4 D:\www\demo\webworkman\Applications\Demo1\start.php(36): WebWorker\Libs\Mdb::getInstance(Array)
+#5 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(2393): {closure}(Object(WebWorker\App))
+#6 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(259): Workerman\Worker->run()
+#7 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1404): WebWorker\App->run()
+#8 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1347): Workerman\Worker::forkWorkersForWindows()
+#9 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(546): Workerman\Worker::forkWorkers()
+#10 D:\www\demo\webworkman\start.php(17): Workerman\Worker::runAll()
+#11 {main}
+2020-07-24 02:37:09 pid:1 Worker process terminated
+2020-07-24 03:11:10 pid:1 Error: Class 'Mdb' not found in D:\www\demo\webworkman\Applications\Demo1\controllers\test.php:5
+Stack trace:
+#0 [internal function]: WebWorker\App->{closure}()
+#1 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(172): call_user_func(Object(Closure))
+#2 D:\www\demo\webworkman\vendor\workerman\workerman\Connection\TcpConnection.php(656): WebWorker\App->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 D:\www\demo\webworkman\vendor\workerman\workerman\Events\Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #34)
+#4 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(2408): Workerman\Events\Select->loop()
+#5 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(259): Workerman\Worker->run()
+#6 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1404): WebWorker\App->run()
+#7 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1347): Workerman\Worker::forkWorkersForWindows()
+#8 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(546): Workerman\Worker::forkWorkers()
+#9 D:\www\demo\webworkman\start.php(17): Workerman\Worker::runAll()
+#10 {main}
+2020-07-24 03:11:10 pid:1 Worker process terminated
+2020-07-24 03:11:58 pid:1 Error: Class 'Mdb' not found in D:\www\demo\webworkman\Applications\Demo1\controllers\test.php:7
+Stack trace:
+#0 [internal function]: WebWorker\App->{closure}()
+#1 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(172): call_user_func(Object(Closure))
+#2 D:\www\demo\webworkman\vendor\workerman\workerman\Connection\TcpConnection.php(656): WebWorker\App->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 D:\www\demo\webworkman\vendor\workerman\workerman\Events\Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #34)
+#4 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(2408): Workerman\Events\Select->loop()
+#5 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(259): Workerman\Worker->run()
+#6 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1404): WebWorker\App->run()
+#7 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1347): Workerman\Worker::forkWorkersForWindows()
+#8 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(546): Workerman\Worker::forkWorkers()
+#9 D:\www\demo\webworkman\start.php(17): Workerman\Worker::runAll()
+#10 {main}
+2020-07-24 03:11:58 pid:1 Worker process terminated
+2020-07-24 04:49:30 pid:1 Error: Call to undefined function config() in D:\www\demo\webworkman\Applications\Demo1\server\TNTSearchService.php:23
+Stack trace:
+#0 D:\www\demo\webworkman\Applications\Demo1\controllers\search.php(6): TNTSearchService->__construct()
+#1 [internal function]: WebWorker\App->{closure}()
+#2 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(172): call_user_func(Object(Closure))
+#3 D:\www\demo\webworkman\vendor\workerman\workerman\Connection\TcpConnection.php(656): WebWorker\App->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#4 D:\www\demo\webworkman\vendor\workerman\workerman\Events\Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #45)
+#5 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(2408): Workerman\Events\Select->loop()
+#6 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(259): Workerman\Worker->run()
+#7 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1404): WebWorker\App->run()
+#8 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1347): Workerman\Worker::forkWorkersForWindows()
+#9 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(546): Workerman\Worker::forkWorkers()
+#10 D:\www\demo\webworkman\start.php(17): Workerman\Worker::runAll()
+#11 {main}
+2020-07-24 04:49:30 pid:1 Worker process terminated
+2020-07-24 05:17:35 pid:1 Error: Call to undefined function config() in D:\www\demo\webworkman\Applications\Demo1\server\TNTSearchService.php:23
+Stack trace:
+#0 D:\www\demo\webworkman\Applications\Demo1\controllers\search.php(14): TNTSearchService->__construct()
+#1 [internal function]: WebWorker\App->{closure}()
+#2 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(172): call_user_func(Object(Closure))
+#3 D:\www\demo\webworkman\vendor\workerman\workerman\Connection\TcpConnection.php(656): WebWorker\App->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#4 D:\www\demo\webworkman\vendor\workerman\workerman\Events\Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #45)
+#5 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(2408): Workerman\Events\Select->loop()
+#6 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(259): Workerman\Worker->run()
+#7 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1404): WebWorker\App->run()
+#8 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1347): Workerman\Worker::forkWorkersForWindows()
+#9 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(546): Workerman\Worker::forkWorkers()
+#10 D:\www\demo\webworkman\start.php(17): Workerman\Worker::runAll()
+#11 {main}
+2020-07-24 05:17:35 pid:1 Worker process terminated
+2020-07-24 05:19:05 pid:1 Worker process terminated with ERROR: E_ERROR "Allowed memory size of 546308096 bytes exhausted (tried to allocate 20480 bytes) in D:\www\demo\webworkman\vendor\fukuball\jieba-php\src\vendor\multi-array\MultiArray.php on line 64"
+2020-07-24 06:23:13 pid:1 Worker process terminated with ERROR: E_ERROR "Allowed memory size of 546308096 bytes exhausted (tried to allocate 20480 bytes) in D:\www\demo\webworkman\vendor\fukuball\jieba-php\src\vendor\multi-array\MultiArray.php on line 64"
+2020-07-24 07:37:24 pid:1 Error: Class 'Jieba' not found in D:\www\demo\webworkman\Applications\Demo1\controllers\search.php:24
+Stack trace:
+#0 [internal function]: WebWorker\App->{closure}()
+#1 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(172): call_user_func(Object(Closure))
+#2 D:\www\demo\webworkman\vendor\workerman\workerman\Connection\TcpConnection.php(656): WebWorker\App->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 D:\www\demo\webworkman\vendor\workerman\workerman\Events\Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #51)
+#4 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(2408): Workerman\Events\Select->loop()
+#5 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(259): Workerman\Worker->run()
+#6 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1404): WebWorker\App->run()
+#7 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1347): Workerman\Worker::forkWorkersForWindows()
+#8 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(546): Workerman\Worker::forkWorkers()
+#9 D:\www\demo\webworkman\start.php(17): Workerman\Worker::runAll()
+#10 {main}
+2020-07-24 07:37:24 pid:1 Worker process terminated
+2020-07-24 08:19:10 pid:1 Error: Call to private TNTSearchService::__construct() from context 'WebWorker\App' in D:\www\demo\webworkman\Applications\Demo1\controllers\search.php:32
+Stack trace:
+#0 [internal function]: WebWorker\App->{closure}()
+#1 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(172): call_user_func(Object(Closure))
+#2 D:\www\demo\webworkman\vendor\workerman\workerman\Connection\TcpConnection.php(656): WebWorker\App->onClientMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 D:\www\demo\webworkman\vendor\workerman\workerman\Events\Select.php(292): Workerman\Connection\TcpConnection->baseRead(Resource id #51)
+#4 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(2408): Workerman\Events\Select->loop()
+#5 D:\www\demo\webworkman\vendor\xtgxiso\webworker\App.php(259): Workerman\Worker->run()
+#6 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1404): WebWorker\App->run()
+#7 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(1347): Workerman\Worker::forkWorkersForWindows()
+#8 D:\www\demo\webworkman\vendor\workerman\workerman\Worker.php(546): Workerman\Worker::forkWorkers()
+#9 D:\www\demo\webworkman\start.php(17): Workerman\Worker::runAll()
+#10 {main}
+2020-07-24 08:19:10 pid:1 Worker process terminated
