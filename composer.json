@@ -1,7 +1,0 @@
-{
-    "require": {
-        "xtgxiso/webworker": "^0.3.7",
-        "teamtnt/tntsearch": "^2.3",
-        "fukuball/jieba-php": "dev-master"
-    }
-}
