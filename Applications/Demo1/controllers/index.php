@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 $app->HandleFunc("/", function () {
     $data = array(
         "ret" => 0,

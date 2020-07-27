@@ -1,6 +1,7 @@
-search-demo
+WebWorker-search-demo
 ========
-基于[WebWorker](https://github.com/xtgxiso/WebWorker)上写的搜索引擎demo
+
+基于[WebWorker](https://github.com/xtgxiso/WebWorker)上写的关键词搜索demo
 
 引用
 ========
@@ -26,8 +27,12 @@ php start.php status    //查看进程情况
 测试
 ========
 
-创建索引 表('SELECT user_id, nickname FROM mx_user;')
-http://127.0.0.1:1215/search/add
-查询
-http://127.0.0.1:1215/search/query?a=ABCD
+创建索引  
+http://127.0.0.1:1215/search/add (表数据'SELECT user_id, nickname FROM mx_user;')  
+查询关键词  
+http://127.0.0.1:1215/search/query?a=ABCD  
+更新索引信息  
+http://127.0.0.1:1215/search/update?a=1  
+
+
 

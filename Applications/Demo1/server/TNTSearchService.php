@@ -2,9 +2,11 @@
 /*
  * @Date : 2020-07-20 16:32:35
  * @LastEditors  : lim
- * @LastEditTime : 2020-07-27 14:50:12
+ * @LastEditTime : 2020-07-27 16:29:37
  * @Descripttion :
 */
+
+declare(strict_types=1);
 
 use TeamTNT\TNTSearch\TNTSearch;
 
@@ -17,7 +19,7 @@ class TNTSearchService
 
     private static $_instance;
 
-    private function __construct($options = [])
+    private function __construct(array $options = [])
     {
         $config = [
             'driver'    => 'mysql',
@@ -32,7 +34,7 @@ class TNTSearchService
         $this->tnt->loadConfig($config);
     }
 
-    public static function getInstance($options = [])
+    public static function getInstance(array $options = []): self
     {
         if (!(self::$_instance instanceof self)) {
             self::$_instance = new self($options);
@@ -45,7 +47,7 @@ class TNTSearchService
      * @param $token
      *
      */
-    public function createIndex()
+    public function createIndex(): void
     {
         $indexer = $this->tnt->createIndex($this->indexName);
         $indexer->setPrimaryKey('user_id');
@@ -54,14 +56,35 @@ class TNTSearchService
         $indexer->inMemory = false;
         $indexer->run();
     }
+    public function updateIndex(array $data = [], int $type = 1)
+    {
+        $this->tnt->selectIndex($this->indexName);
+        $index = $this->tnt->getIndex();
+        $index->setPrimaryKey('user_id');
+        $index->setTokenizer($this->getToken());
 
+        if ($type == 1) {
+            //to insert a new document to the index
+            $index->insert(['user_id' => '999999', 'nickname' => '哦哦哦哦']);
+        }
+
+        if ($type == 2) {
+            //to update an existing document
+            $index->update(999999, ['user_id' => '999998', 'nickname' => '哇哇哇哇哇']);
+        }
+
+        if ($type == 3) {
+            //to delete the document from index
+            $index->delete(999999);
+        }
+    }
     /**
      * 搜索
      * @param $keyword
      * @return array
      * @throws \TeamTNT\TNTSearch\Exceptions\IndexNotFoundException
      */
-    public function search($keyword)
+    public function search(String $keyword): array
     {
         $tnt = $this->tnt;
         $tnt->selectIndex($this->indexName);
@@ -70,14 +93,13 @@ class TNTSearchService
         return $tnt->search($keyword);
     }
 
+
+
     public function getToken()
     {
         return new JiebaTokenizer();
     }
 
-    // public function __clone()
-    // {
-    //     //E_USER_ERROR只能通过trigger_error($msg, E_USER_ERROR)手动触发。E_USER_ERROR是用户自定义错误类型，可以被set_error_handler错误处理函数捕获，允许程序继续运行。E_ERROR是系统错误，不能被set_error_handler错误处理函数捕获，程序会退出运行
-    //     trigger_error('Clone is not allow!', E_USER_ERROR);
-    // }
+    public function __clone()
+    { }
 }

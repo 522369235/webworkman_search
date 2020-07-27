@@ -6,6 +6,8 @@
  * @Descripttion :
 */
 
+declare(strict_types=1);
+
 use Fukuball\Jieba\Jieba;
 use Fukuball\Jieba\Finalseg;
 use TeamTNT\TNTSearch\Support\TokenizerInterface;
