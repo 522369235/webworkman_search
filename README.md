@@ -1,15 +1,16 @@
-WebWorkerexample
+search-demo
 ========
-基于WebWorker写的一个简单的参考示例，大家可以根据这个示例自由修改
+基于[WebWorker](https://github.com/xtgxiso/WebWorker)上写的搜索引擎demo
 
-安装
+引用
 ========
 
-```
-git clone git@github.com:xtgxiso/WebWorker-example.git
-cd WebWorker-example
-composer require xtgxiso/webworker
-```
+[WebWorker](https://github.com/xtgxiso/WebWorker)
+
+[结巴中文分词](https://github.com/fukuball/jieba-php)
+
+[TNTSearch](https://github.com/teamtnt/tntsearch)
+
 命令
 ========
 
@@ -22,6 +23,11 @@ php start.php restart   //重新启动
 php start.php status    //查看进程情况
 ```
 
-技术交流QQ群
+测试
 ========
-517297682
+
+创建索引 表('SELECT user_id, nickname FROM mx_user;')
+http://127.0.0.1:1215/search/add
+查询
+http://127.0.0.1:1215/search/query?a=ABCD
+

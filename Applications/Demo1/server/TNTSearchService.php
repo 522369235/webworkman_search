@@ -2,7 +2,7 @@
 /*
  * @Date : 2020-07-20 16:32:35
  * @LastEditors  : lim
- * @LastEditTime : 2020-07-24 17:02:02
+ * @LastEditTime : 2020-07-27 14:50:12
  * @Descripttion :
 */
 
@@ -25,7 +25,7 @@ class TNTSearchService
             'database'  => $options['db'],
             'username'  => $options['user'],
             'password'  => $options['password'],
-            'storage'   => 'D:/www/demo/webworkman/public/tntsearch/examples/',
+            'storage'   => APP_PATH . '/public/tntsearch/examples/',
             'stemmer'   => \TeamTNT\TNTSearch\Stemmer\PorterStemmer::class //optional
         ];
         $this->tnt = new TNTSearch;
@@ -37,7 +37,6 @@ class TNTSearchService
         if (!(self::$_instance instanceof self)) {
             self::$_instance = new self($options);
         }
-
         return self::$_instance;
     }
 
@@ -76,9 +75,9 @@ class TNTSearchService
         return new JiebaTokenizer();
     }
 
-    public function __clone()
-    {
-        //E_USER_ERROR只能通过trigger_error($msg, E_USER_ERROR)手动触发。E_USER_ERROR是用户自定义错误类型，可以被set_error_handler错误处理函数捕获，允许程序继续运行。E_ERROR是系统错误，不能被set_error_handler错误处理函数捕获，程序会退出运行
-        trigger_error('Clone is not allow!', E_USER_ERROR);
-    }
+    // public function __clone()
+    // {
+    //     //E_USER_ERROR只能通过trigger_error($msg, E_USER_ERROR)手动触发。E_USER_ERROR是用户自定义错误类型，可以被set_error_handler错误处理函数捕获，允许程序继续运行。E_ERROR是系统错误，不能被set_error_handler错误处理函数捕获，程序会退出运行
+    //     trigger_error('Clone is not allow!', E_USER_ERROR);
+    // }
 }

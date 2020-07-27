@@ -9,9 +9,7 @@ $app->HandleFunc('/search/add', function () use ($config) {
 
 $app->HandleFunc('/search/query', function () use ($config) {
 
-    $a = $_GET['a'] ?? '无';
-
-    $res = TNTSearchService::getInstance($config['db'])->search($a);
+    $res = TNTSearchService::getInstance($config['db'])->search($_GET['a'] ?? '无');
 
     return $this->ServerJson($res);
 });
